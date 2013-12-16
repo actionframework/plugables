@@ -9,5 +9,10 @@ module ActionFramework
 				puts "Plugable #{plugable} doens't exist"
 			end	
 		end
+
+		def self.install
+			require 'actionframework/plugables_install'
+			require File.join(Dir.pwd,'config/plugables');
+		end
 	end
 end
